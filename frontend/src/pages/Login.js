@@ -27,7 +27,7 @@ const Login = () => {
     try {
       setLoading(true);
       const res = await axios.post(
-        'http://localhost:5000/api/auth/login', form
+        'https://social-app-backend-e8b5.onrender.com/api/auth/login', form
       );
       login(res.data.user, res.data.token);
       navigate('/feed');

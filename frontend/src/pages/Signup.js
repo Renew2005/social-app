@@ -34,7 +34,7 @@ const Signup = () => {
     try {
       setLoading(true);
       const res = await axios.post(
-        'http://localhost:5000/api/auth/signup', form
+        'https://social-app-backend-e8b5.onrender.com/api/auth/signup', form
       );
       // Save user and token globally
       login(res.data.user, res.data.token);

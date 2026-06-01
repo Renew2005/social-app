@@ -22,7 +22,7 @@ const Feed = () => {
   const fetchPosts = async () => {
     try {
       setLoading(true);
-      const res = await axios.get('http://localhost:5000/api/posts');
+      const res = await axios.get('https://social-app-backend-e8b5.onrender.com/api/posts');
       setPosts(res.data);
     } catch (err) {
       setError('Failed to load posts');

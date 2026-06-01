@@ -17,7 +17,7 @@ const CommentSection = ({ postId, comments, onCommentAdded }) => {
     try {
       setLoading(true);
       const res = await axios.post(
-        `http://localhost:5000/api/posts/${postId}/comment`,
+        `https://social-app-backend-e8b5.onrender.com/api/posts/${postId}/comment`,
         { text },
         { headers: { Authorization: `Bearer ${token}` } }
       );

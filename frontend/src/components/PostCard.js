@@ -25,7 +25,7 @@ const PostCard = ({ post }) => {
   const handleLike = async () => {
     try {
       const res = await axios.put(
-        `http://localhost:5000/api/posts/${post._id}/like`,
+        `https://social-app-backend-e8b5.onrender.com/api/posts/${post._id}/like`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -82,7 +82,7 @@ const PostCard = ({ post }) => {
       {post.image && (
         <CardMedia
           component="img"
-          image={`http://localhost:5000${post.image}`}
+          image={`https://social-app-backend-e8b5.onrender.com${post.image}`}
           alt="post"
           sx={{ maxHeight: 400, objectFit: 'cover' }}
         />

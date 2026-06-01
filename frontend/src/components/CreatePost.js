@@ -42,7 +42,7 @@ const CreatePost = ({ onPostCreated }) => {
       if (image) formData.append('image', image);
 
       const res = await axios.post(
-        'http://localhost:5000/api/posts',
+        'https://social-app-backend-e8b5.onrender.com/api/posts',
         formData,
         {
           headers: {
